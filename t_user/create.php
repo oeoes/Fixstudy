@@ -1,15 +1,17 @@
 <?php 
 
+// methode diganti dengan POST
+
     include "../connection.php";
 
-    $username = $_GET['username'];
-    $pass = $_GET['pass'];
-    $nim = $_GET['nim'];
-    $email = $_GET['email'];
-    $jur = $_GET['jur'];
-    $jk = $_GET['jk'];
-    $tgl_lahir = $_GET['tgl_lahir'];
-    $notelp = $_GET['notelp'];
+    $username = $_POST['username'];
+    $pass = $_POST['pass'];
+    $nim = $_POST['nim'];
+    $email = $_POST['email'];
+    $jur = $_POST['jur'];
+    $jk = $_POST['jk'];
+    $tgl_lahir = $_POST['tgl_lahir'];
+    $notelp = $_POST['notelp'];
 
     $tambah = mysqli_query($koneksi, "INSERT INTO t_user(username, pass, nim, email, jur, jk, tgl_lahir, notelp) VALUES('$username', '$pass', '$nim', '$email', '$jur', '$jk', '$tgl_lahir', '$notelp')");
     $response = array();
